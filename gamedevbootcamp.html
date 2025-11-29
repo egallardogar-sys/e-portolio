@@ -3,6 +3,79 @@ layout: portfolio
 title: "Game Dev Bootcamp"
 ---
 
+<style>
+/* Banner styling similar to index.html */
+.page-banner {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.bootcamp-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.page-banner h1 {
+    margin: 10px 0 5px 0;
+}
+.page-banner p {
+    margin: 0 0 20px 0;
+}
+
+/* Responsive video style consistent with portfolio */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    margin-bottom: 40px;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Lesson list styling */
+.lessons h2 {
+    margin-top: 40px;
+    text-align: center;
+}
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 900px;
+}
+.lesson-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+.lesson-list li:last-child {
+    border-bottom: none;
+}
+.lesson-list a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.lesson-list a:hover {
+    text-decoration: underline;
+}
+
+/* Footer match */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+</style>
+
 <header class="page-banner">
     <img src="/gamedevbootcamp.png" alt="Game Dev Bootcamp Banner" class="bootcamp-banner" />
     <h1>Game Dev Bootcamp</h1>

@@ -53,18 +53,18 @@ title: "Esteban Gallardo - Portfolio"
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
- .item.image {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* square aspect ratio */
+.item.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.item.image img {
-    position: absolute;
-    top: 0; left: 0;
+.teaching-img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* optional */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional */
 }
 </style>
 
@@ -129,7 +129,7 @@ title: "Esteban Gallardo - Portfolio"
     <!-- VR Games Row -->
     <h2 class="row-title">VR Game Development</h2>
     <div class="row">
-        <div class="item video"><iframe src="https://www.youtube.com/embed/MBoBPXdZbZw" allowfullscreen></div>
+        <div class="item video"><iframe src="https://www.youtube.com/embed/MBoBPXdZbZw" allowfullscreen></iframe></div>
         <div class="item video"><iframe src="https://www.youtube.com/embed/jVzLzQZ5bZ4" allowfullscreen></iframe></div>
         <p class="row-text">
             From the early VR devices like Oculus Go to the latest generation devices like

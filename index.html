@@ -248,11 +248,21 @@ title: "Esteban Gallardo - Portfolio"
 <script>
 const discussionTitles = {
     "default-thread": "General Discussion",
-    "java-game-english-trainer": "Discussion about Mobile English Trainer",
-    "java-game-simbad": "Discussion about Java Game Simbad",
-    "java-game-spanish-football": "Discussion about Total Spanish Football",
-    "education-avalmind": "Discussion about the Avalmind Presentation"
-    // Add more entries here as needed
+    "java-game-english-trainer": "Discussion about Java Game: Mobile English Trainer",
+    "java-game-simbad": "Discussion about Java Game: Simbad",
+    "java-game-spanish-football": "Discussion about Java Game: Total Spanish Football",
+    "flash-game-bungees": "Discussion about the Flash Game: Bungees Rescue",
+    "flash-game-godsgarden": "Discussion about the Flash Game: God's Garden Defense",
+    "flash-game-gambling": "Discussion about the freelance Flash development work",
+    "unity-mobile-game-anticlea": "Discussion about the Unity Mobile Game: Anticlea",
+    "unity-mobile-game-bowling": "Discussion about the Unity Mobile Game: Bowling of the Dead",
+    "unity-vr-game-zombie3d": "Discussion about the VR Game: Zombie Baseball 3D",
+    "unity-vr-game-8bricks": "Discussion about the VR Game: 8-Bricks",
+    "software-ai-workflowsimulator": "Discussion about the AI project: Workflow Simulator",
+    "software-ai-audiobooks": "Discussion about the AI project: Story Book Editor",
+    "education-gamedev-bootcamp": "Discussion about the educational project: Game Dev Bootcamp",
+    "education-tools-evaluation": "Discussion about the educational project: Evaluation Tool Analisys",
+    "education-learning-theories": "Discussion about the educational project: Learning Theories"
 };
 	
 document.addEventListener("DOMContentLoaded", () => {
@@ -386,7 +396,6 @@ function loadDiscussion(slug) {
             <!-- Hover explanation panel -->
             <div class="item-explanation">
                 <p>The challenge of this game was to create a scalable sprite based tile map solution where we could easily scale down the design with another using less resources.</p>
-                <p>Tell us what do you think about it:</p>
                 <p class="feedback-trigger" onclick="loadDiscussion('java-game-simbad')">
                     💬 Click here to provide feedback.
                 </p>
@@ -406,10 +415,8 @@ function loadDiscussion(slug) {
 
                 <!-- Hover explanation panel -->
                 <div class="item-explanation">
-                    <p>This project was certified by Nokia and included by default in their devices.</p>
-                    <p>The project was a worldwide success translated over 15 different languages.</p>
-                    <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
-                    <p>Tell us what do you think about it:</p>
+                    <p>The most dificult issue when developing a game for phones with keyboard was that the traditional way to control a player barely works, that's why I came up with an innovative way to play where you just controlled who to pass the ball and when to shoot. The result was a success with an audience eager to have a game to enjoy without worrying about the controls.</p>
+                    <p>
                     <p class="feedback-trigger" onclick="loadDiscussion('java-game-spanish-football')">
                         💬 Click here to provide feedback.
                     </p>		
@@ -442,9 +449,7 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>For this project my duties were beyond game programming and I was in charge of game design. Even if the gameplay is familiar there are multiple layers of mechanics that add new dimensions to the gameplay. Aside from precision, there was a challenging puzzle concept yet to be seen at the time.</p>
                 <p class="feedback-trigger" onclick="loadDiscussion('flash-game-bungees')">
                     💬 Click here to provide feedback.
                 </p>
@@ -465,9 +470,9 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>This project was the last project of the Flash era. The Flash era was a time where small independent developers, even individuals, could make it through sponsorships and ad-revenue. That all came to a close when the Free2Play mobile business model based on predatory mechanics got rid of any way users could discover and enjoy new games. </p>
+                <p>Nowadays, this rich ecosystem is gone and indied developers have moved to Steam where the discoverability exists but isn't great. Mobile and browser markets are managed by few big players and aggresive predatory developers who work sucking the blood of 'Whales' creating a toxic wasteland with zero discovery.</p>
+                <p>
                 <p class="feedback-trigger" onclick="loadDiscussion('flash-game-godsgarden')">
                     💬 Click here to provide feedback.
                 </p>
@@ -487,9 +492,9 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>Freelance Flash work. Deadlines met. Project's goals reached. Customer satisfaction. Job done.</p>
+                <p>When you are a professional you develop the software that you are asked to do with top level of professionalism.</p> 
+                <p>Nowadays professionalism isn't enough. The recruitment process has created a toxic culture of recruiting "passionate people" unaware that "passion" in workplace only ends badly, but recruiters and HR usually don't care about the hell they create.</p>
                 <p class="feedback-trigger" onclick="loadDiscussion('flash-game-gambling')">
                     💬 Click here to provide feedback.
                 </p>
@@ -521,13 +526,12 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>This project was designed for mobile smartphones back when the mobile game market was young and indie developers had a sligth chance to make it with premium games.</p>
+                <p>The core gameplay is a action-puzzle. It also has elements of Metroidvania gameplay since by acquiring new skills allowed you to discover new areas of the map.</p>
             <a href="#" 
                 class="embed-trigger overlay-link" 
                 data-embed-url="https://itch.io/embed-upload/3383923?color=333333">
-                👉 Play Anticlea Now
+                👉 Play Anticlea in your browser
                 </a>		
             <p>	
             <p class="feedback-trigger" onclick="loadDiscussion('unity-mobile-game-anticlea')">
@@ -549,9 +553,7 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>This fun silly game was the most successfull production done during the Unity mobile game development era. It was refreshing to get feedback from people who played the game with their children and had a blast.</p>
                 <p>	
                 <p class="feedback-trigger" onclick="loadDiscussion('unity-mobile-game-bowling')">
                     💬 Click here to provide feedback.
@@ -584,14 +586,9 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
-                <a href="#" 
-                class="embed-trigger overlay-link" 
-                data-embed-url="https://itch.io/embed-upload/3308625?color=000000">
-                👉 Play Zombie Baseball 3D Now
-                </a>		
+                <p>This project was based on a successfull game development done in the Flash era: Zombie Baseball. Since the gameplay couldn't be translated I experimented with a different gameplay loop which was based on perfect the timing to hit balls thrown at different speeds with your bat.</p>
+                <p>
+                <p><a href="https://www.meta.com/en-gb/experiences/zombie-baseball-3d/4647990821926683">🥽 Play the game in Meta Quest</a></p>
                 <p>	
                 <p class="feedback-trigger" onclick="loadDiscussion('unity-vr-game-zombie3d')">
                     💬 Click here to provide feedback.
@@ -613,13 +610,14 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>For this project I evolved a tool for level creation developed for Anticlea to create incredible complex puzzles. The goal of the game is to escape from a digital prison where your mind has been imprisoned. The mechanics are similar to the rogue-lite games in the sense that you repeat your journey acquiring more powerful skills until you finally escape.</p>
+                <p>
+                <p><a href="https://www.meta.com/en-gb/experiences/8-bricks/4098398106931227">🥽 Play the game in Meta Quest</a></p>
+                <p>
                 <a href="#" 
                 class="embed-trigger overlay-link" 
                 data-embed-url="https://itch.io/embed-upload/3384017?color=333333">
-                👉 Play 8-Bricks Now
+                👉 Play 8-Bricks in your browser
                 </a>		
                 <p>	
                 <p class="feedback-trigger" onclick="loadDiscussion('unity-vr-game-8bricks')">
@@ -640,16 +638,52 @@ function loadDiscussion(slug) {
 <details class="collapsible-section">
     <summary class="row-title">AI Development</summary>    
     <div class="row">
-        <div class="item image">
-            <a href="https://www.workflowsimulator.com">
-                <img src="worklfowsimulator.png" alt="Workflow Simulator" class="teaching-img">
-            </a>
-        </div>
-        <div class="item image">
-            <a href="https://www.aistorybookeditor.com">
-                <img src="storybookeditor.png" alt="AI Story Book Editor" class="teaching-img">
-            </a>
-        </div>
+        <div class="item info-card">
+
+            <!-- Visual item -->
+            <div class="item-content">
+                <a href="https://www.workflowsimulator.com">
+                    <img src="worklfowsimulator.png" alt="Workflow Simulator" class="teaching-img">
+                </a>
+            </div>
+
+            <!-- Title that triggers explanation hover -->
+            <div class="item-title">
+                Workflow Simulator: Create a digital twin of your office
+            </div>
+
+            <!-- Hover explanation panel -->
+            <div class="item-explanation">
+                <p>In this project I developed a tool that allowed you to create a digital twin office. With this digital twin, you can simulate Sprints to indentify possible bottlenecks before they happen, but the most important use is to test the soft-skills of candidates by making them to participate in the workflow of a Sprint..</p>
+                <p>
+                <p class="feedback-trigger" onclick="loadDiscussion('software-ai-workflowsimulator')">
+                    💬 Click here to provide feedback.
+                </p>
+            </div>
+        </div>   
+        <div class="item info-card">
+
+            <!-- Visual item -->
+            <div class="item-content">
+                <a href="https://www.aistorybookeditor.com">
+                    <img src="storybookeditor.png" alt="AI Story Book Editor" class="teaching-img">
+                </a>
+            </div>
+
+            <!-- Title that triggers explanation hover -->
+            <div class="item-title">
+                Story Book Editor: Create a your audiobooks in record time with a fraction of the cost.
+            </div>
+
+            <!-- Hover explanation panel -->
+            <div class="item-explanation">
+                <p>In this project I explored a passion of mine that was written sci-fi stories. The tool not only helps in the creative writing process, but it also streamlines the audiobook creation process. You can convert any story into an audiobook, with multiple different voices assigned to the different characters of the story, in record time at a fraction of the cost of the production of a full-fledge audiobook. This solution was meant to help small authors who didn't have resources to create audiobooks for their stories</p>
+                <p>
+                <p class="feedback-trigger" onclick="loadDiscussion('software-ai-audiobooks')">
+                    💬 Click here to provide feedback.
+                </p>
+            </div>
+        </div>   
         <p class="row-text">
             The <a href="https://www.workflowsimulator.com">Workflow Simulator</a> allows users to create a <b>digital twin of their office</b>, enabling them to experiment with workflows and proactively address potential challenges. Meanwhile, the <a href="https://www.aistorybookeditor.com">AI Story Book Editor</a> <b>revolutionizes audiobook production</b> by streamlining the process, delivering high-quality results in record time and on a tight budget.
         </p>
@@ -676,10 +710,7 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
-                <p>Tell us what do you think about it:</p>
+                <p>This course is designed for people who want to become part of a professional team of developers. It is ideal for students considering a computer engineering degree and looking for a solid introduction to software development, Unity, object-oriented programming, design patterns, and real-world workflows.</p>
                 <p>
                 <p class="feedback-trigger" onclick="loadDiscussion('education-gamedev-bootcamp')">
                     💬 Click here to provide feedback.
@@ -704,9 +735,8 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
+                <p>In this Catalan presentation it's realized an analysis of the different existing online tools available to perform evaluations of the students.</p>
+                <p>
                 <a href="#" 
                 class="embed-trigger overlay-link" 
                 data-embed-url="https://view.genially.com/691f5e3f887f0367cb51b8eb">
@@ -736,9 +766,8 @@ function loadDiscussion(slug) {
 
             <!-- Hover explanation panel -->
             <div class="item-explanation">
-                <p>This project was certified by Nokia and included by default in their devices.</p>
-                <p>The project was a worldwide success translated over 15 different languages.</p>
-                <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
+                <p>This conceptual map explores the different psychological paradigms of learning, such as behaviorism, cognitivism, constructivism, and symbolic interactionism</p>
+                <p>
                 <a href="#" 
                 class="embed-trigger overlay-link" 
                 data-embed-url="https://embed.figma.com/board/cnk0ER38MDngOMlVa7bfk3/Mapegem-teories-de-l-aprenentatge-i-tend%C3%A8ncies?embed-host=share">

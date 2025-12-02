@@ -209,11 +209,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+let currentDiscussion = null;
+	
 function loadDiscussion(slug) {
-    const giscus = document.querySelector("script[data-giscus]");
+    if (currentDiscussion === slug) return; // prevent unnecessary reloads
+    currentDiscussion = slug;
+
+    const giscus = document.querySelector("#giscus-config");
     giscus.setAttribute("data-term", slug);
 
-    // Recreate the Giscus iframe to reload the discussion
     const iframe = document.querySelector("iframe.giscus-frame");
     if (iframe) iframe.remove();
 
@@ -221,6 +225,7 @@ function loadDiscussion(slug) {
     for (let attr of giscus.attributes) {
         newScript.setAttribute(attr.name, attr.value);
     }
+    newScript.setAttribute("data-giscus", "true"); // mark it as the config script
     document.body.appendChild(newScript);
 }
 </script>
@@ -284,19 +289,20 @@ function loadDiscussion(slug) {
         </ol>
         <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS">Mobile Spanish Trainer</a>.</p>
 		<p>Tell us what do you think about it:</p>
-		<script src="https://giscus.app/client.js"
-            data-repo="egallardogar-sys/e-portolio"
-            data-repo-id="R_kgDOQfbAqQ"
-            data-category="General"
-            data-category-id="DIC_kwDOQfbAqc4CzNto"
-            data-mapping="specific"
-            data-term="java-game-english-trainer"
-            data-reactions-enabled="1"
-            data-input-position="bottom"
-            data-lang="ca"
-            crossorigin="anonymous"
-            async>        
-		</script>
+<script id="giscus-config" data-giscus
+    src="https://giscus.app/client.js"
+    data-repo="egallardogar-sys/e-portolio"
+    data-repo-id="R_kgDOQfbAqQ"
+    data-category="General"
+    data-category-id="DIC_kwDOQfbAqc4CzNto"
+    data-mapping="specific"
+    data-term="default-thread"
+    data-reactions-enabled="1"
+    data-input-position="bottom"
+    data-lang="ca"
+    crossorigin="anonymous"
+    async>
+</script>
 		<p>More information: <a href="https://www.yourvrexperience.com" target="_blank">yourvrexperience.com</a></p>
     </div>
 
@@ -319,19 +325,20 @@ function loadDiscussion(slug) {
         <p>The project was a worldwide success translated over 15 different languages.</p>
         <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
 		<p>Tell us what do you think about it:</p>
-		<script src="https://giscus.app/client.js"
-            data-repo="egallardogar-sys/e-portolio"
-            data-repo-id="R_kgDOQfbAqQ"
-            data-category="General"
-            data-category-id="DIC_kwDOQfbAqc4CzNto"
-            data-mapping="specific"
-            data-term="java-game-simbad"
-            data-reactions-enabled="1"
-            data-input-position="bottom"
-            data-lang="ca"
-            crossorigin="anonymous"
-            async>        
-		</script>
+<script id="giscus-config" data-giscus
+    src="https://giscus.app/client.js"
+    data-repo="egallardogar-sys/e-portolio"
+    data-repo-id="R_kgDOQfbAqQ"
+    data-category="General"
+    data-category-id="DIC_kwDOQfbAqc4CzNto"
+    data-mapping="specific"
+    data-term="default-thread"
+    data-reactions-enabled="1"
+    data-input-position="bottom"
+    data-lang="ca"
+    crossorigin="anonymous"
+    async>
+</script>
 		<p>More information: <a href="https://www.yourvrexperience.com" target="_blank">yourvrexperience.com</a></p>
     </div>
 </div>        
@@ -353,19 +360,20 @@ function loadDiscussion(slug) {
         <p>The project was a worldwide success translated over 15 different languages.</p>
         <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
 		<p>Tell us what do you think about it:</p>
-		<script src="https://giscus.app/client.js"
-            data-repo="egallardogar-sys/e-portolio"
-            data-repo-id="R_kgDOQfbAqQ"
-            data-category="General"
-            data-category-id="DIC_kwDOQfbAqc4CzNto"
-            data-mapping="specific"
-            data-term="java-game-spanish-football"
-            data-reactions-enabled="1"
-            data-input-position="bottom"
-            data-lang="ca"
-            crossorigin="anonymous"
-            async>                
-		</script>
+<script id="giscus-config" data-giscus
+    src="https://giscus.app/client.js"
+    data-repo="egallardogar-sys/e-portolio"
+    data-repo-id="R_kgDOQfbAqQ"
+    data-category="General"
+    data-category-id="DIC_kwDOQfbAqc4CzNto"
+    data-mapping="specific"
+    data-term="default-thread"
+    data-reactions-enabled="1"
+    data-input-position="bottom"
+    data-lang="ca"
+    crossorigin="anonymous"
+    async>
+</script>
 		<p>More information: <a href="https://www.yourvrexperience.com" target="_blank">yourvrexperience.com</a></p>
     </div>
 

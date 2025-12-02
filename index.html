@@ -121,23 +121,48 @@ title: "Esteban Gallardo - Portfolio"
     padding-top: 20px;
 }
 
-.hover-info .item-extra {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background: rgba(240, 240, 240, 0.9);
-    border-radius: 8px;
-    text-align: center;
+./* The wrapper */
+.hover-card {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
 }
 
-.hover-info:hover .item-extra {
-    display: block;
-}
-
-.item-content {
+/* The original content (video or image) */
+.hover-card .item-content {
     width: 100%;
     height: 100%;
+    transition: opacity 0.3s ease;
 }
+
+/* The explanation box */
+.hover-card .item-explanation {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: white; /* or rgba(255,255,255,0.95) */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Hover effect */
+.hover-card:hover .item-content {
+    opacity: 0;
+}
+
+.hover-card:hover .item-explanation {
+    opacity: 1;
+}
+
 </style>
 
 <!-- Banner Section -->
@@ -165,41 +190,35 @@ title: "Esteban Gallardo - Portfolio"
     <summary class="row-title">Java Mobile Game Development</summary>    
     <div class="row">        
 
-<div class="item video">     
-    <div class="item hover-info">
+    <div class="item hover-card">
         <div class="item-content">
             <iframe src="https://www.youtube.com/embed/_cb-M0xejWE" allowfullscreen></iframe>
         </div>
-        <div class="item-extra">
+        <div class="item-explanation">
             <p>English Trainer was a Nokia certified game that was included by default in Nokia devices.</p>
             <a href="https://youtu.be/xxxx" target="_blank">▶ Play Video</a>
         </div>
     </div>
-</div>        
-        
-<div class="item video">
-    <div class="item hover-info">
+
+    <div class="item hover-card">
         <div class="item-content">
             <iframe src="https://www.youtube.com/embed/Xila17sNKNQ" allowfullscreen></iframe>
         </div>
-        <div class="item-extra">
+        <div class="item-explanation">
             <p>In this adventure Simbad has to face his enemies to take back the treasure.</p>
             <a href="https://youtu.be/xxxx" target="_blank">▶ Play Video</a>
         </div>
     </div>
-</div>
-            
-<div class="item video">
-    <div class="item hover-info">
+
+    <div class="item hover-card">
         <div class="item-content">
             <iframe src="https://www.youtube.com/embed/2yESVOXheSg" allowfullscreen></iframe>
         </div>
-        <div class="item-extra">
+        <div class="item-explanation">
             <p>A soccer game adapted to the smartphone with physical keyboard with an innovative control system that evolved the gameplay.</p>
             <a href="https://youtu.be/xxxx" target="_blank">▶ Play Video</a>
         </div>
     </div>
-</div>
         
         <p class="row-text">
             In the beginning we needed to deploy the J2ME project from lower end devices to

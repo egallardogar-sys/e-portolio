@@ -192,6 +192,49 @@ title: "Esteban Gallardo - Portfolio"
 .feedback-trigger:hover {
     color: #0056c7;
 }	
+/* Hidden by default */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centered iframe area */
+.overlay-content {
+    width: 90%;
+    height: 90%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The embedded content */
+.overlay-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Close button */
+.overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+	
 </style>
 
 <script>
@@ -440,6 +483,12 @@ function loadDiscussion(slug) {
                 <img src="avalmind.png" alt="AVALMind Course" class="teaching-img">
             </a>
         </div>
+        <div class="item image">
+			<div class="overlay-trigger" 
+			     data-embed-url="https://view.genially.com/691f5e3f887f0367cb51b8eb">
+			    <img src="avalmind.png">
+			</div>			
+        </div>
         <p class="row-text">
             The opportunity to <b>share my knowledge with future generations</b> revealed a passion
             for teaching I wasn't aware of. Now I'm fully committed to designing the best
@@ -448,27 +497,7 @@ function loadDiscussion(slug) {
     </div>
 </details>
     
-    <!-- Genially Row -->
-<details class="collapsible-section">
-    <summary class="row-title">Genially Presentation</summary>         
-    <div class="row">
-        <div class="item genially"><iframe title="Experiències d'avaluació i estratègies !" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/691f5e3f887f0367cb51b8eb" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe></div>
-        <p class="row-text">
-            Prova d'integració de Genially en Github Pages.
-        </p>
-    </div>
-</details>
-
-<details class="collapsible-section">
-    <summary class="row-title">Figma Integration</summary>
-    <div class="row">
-        <div class="item video"><iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="800" src="https://embed.figma.com/board/cnk0ER38MDngOMlVa7bfk3/Mapegem-teories-de-l-aprenentatge-i-tend%C3%A8ncies?embed-host=share" allowfullscreen></iframe></div>
-        <p class="row-text">
-            Prova d'integració de Figma en Github Pages.
-        </p>
-    </div>
-</details>
-
+    
 </section>
 
 <section id="discussion-panel">

@@ -162,8 +162,39 @@ title: "Esteban Gallardo - Portfolio"
 .hover-card:hover .item-explanation {
     opacity: 1;
 }
-    
+
+.hover-info .item-extra {
+    display: none;
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hover-info:hover .item-extra {
+    display: block;
+}    
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll(".hover-info").forEach(function (item) {
+        const playButton = item.querySelector(".play-inside");
+        const iframe = item.querySelector("iframe");
+        const videoId = item.dataset.videoId;
+
+        playButton.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Replace the iframe src with autoplay enabled
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        });
+    });
+
+});
+</script>
 
 <!-- Banner Section -->
 <header class="banner">
@@ -206,11 +237,19 @@ title: "Esteban Gallardo - Portfolio"
     <div class="row">        
         <div class="item video">
             <div class="item hover-card">
-                <div class="item-content">
-                    <iframe src="https://www.youtube.com/embed/pxiJQLWGYgE" allowfullscreen></iframe>
-                </div>
-                <div class="item-explanation">
-                    <p>Mobile English Trainer</p>
+                <div class="item hover-info" data-video-id="pxiJQLWGYgE">
+                    <div class="item-content">
+                        <iframe 
+                            src="https://www.youtube.com/embed/pxiJQLWGYgE" 
+                            allow="autoplay"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                
+                    <div class="item-extra">
+                        <p>This video demonstrates the gameplay mechanics.</p>
+                        <a href="#" class="play-inside">▶ Play Video</a>
+                    </div>
                 </div>
             </div>            
         </div>

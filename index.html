@@ -158,6 +158,20 @@ title: "Esteban Gallardo - Portfolio"
     display: block;
 }
     
+.item-content {
+    width: 100%;
+    height: 250px;   /* ← You control this value */
+    position: relative;
+    overflow: hidden;
+}
+
+.item-content iframe,
+.item-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain, see below */
+    border: none;
+}   
 </style>
 
 <!-- Banner Section -->

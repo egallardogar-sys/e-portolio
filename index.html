@@ -234,7 +234,15 @@ title: "Esteban Gallardo - Portfolio"
     padding: 4px 12px;
     border-radius: 6px;
 }
-	
+
+.embed-trigger {
+    cursor: pointer;
+}
+
+.embed-trigger:hover img {
+    transform: scale(1.03);
+    transition: transform 0.25s ease;
+}	
 </style>
 
 <script>
@@ -501,14 +509,15 @@ function loadDiscussion(slug) {
 
     <!-- Visual item -->
     <div class="item-content">
-            <a href="https://sites.google.com/uoc.edu/avalmind/home">
-                <img src="avalmind.png" alt="AVALMind Course" class="teaching-img">
-            </a>
+			<div class="embed-trigger"
+			     data-embed-url="https://view.genially.com/691f5e3f887f0367cb51b8eb">
+			    <img src="einesavaluacio.png" class="teaching-img">
+			</div>
     </div>
 
     <!-- Title that triggers explanation hover -->
     <div class="item-title">
-        AVALMind
+        Evaluation Tools
     </div>
 
     <!-- Hover explanation panel -->
@@ -517,7 +526,7 @@ function loadDiscussion(slug) {
         <p>The project was a worldwide success translated over 15 different languages.</p>
         <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
 		<p>Tell us what do you think about it:</p>
-<p class="feedback-trigger" onclick="loadDiscussion('education-avalmind')">
+<p class="feedback-trigger" onclick="loadDiscussion('education-tools-evaluation')">
     Click here to provide feedback.
 </p>
     </div>
@@ -527,14 +536,14 @@ function loadDiscussion(slug) {
     <!-- Visual item -->
     <div class="item-content">
 			<div class="embed-trigger"
-			     data-embed-url="https://view.genially.com/691f5e3f887f0367cb51b8eb">
-			    <img src="avalmind.png" class="teaching-img">
+			     data-embed-url="https://embed.figma.com/board/cnk0ER38MDngOMlVa7bfk3/Mapegem-teories-de-l-aprenentatge-i-tend%C3%A8ncies?embed-host=share">
+			    <img src="conceptualmap.png" class="teaching-img">
 			</div>
 	</div>
 
     <!-- Title that triggers explanation hover -->
     <div class="item-title">
-        Presentation
+        Conceptual Map: Learning Theories
     </div>
 
     <!-- Hover explanation panel -->
@@ -543,7 +552,7 @@ function loadDiscussion(slug) {
         <p>The project was a worldwide success translated over 15 different languages.</p>
         <p>Following the success it was made another game to learn Spanish: <a href="https://youtu.be/xO7AlRio9KM?si=E0BtmzL6UBF3WKUS" target="_blank">Mobile Spanish Trainer</a>.</p>
 		<p>Tell us what do you think about it:</p>
-<p class="feedback-trigger" onclick="loadDiscussion('education-avalmind')">
+<p class="feedback-trigger" onclick="loadDiscussion('education-learning-theories')">
     Click here to provide feedback.
 </p>
     </div>

@@ -185,6 +185,46 @@ title: "Esteban Gallardo - Portfolio"
 }   
 </style>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const overlay = document.getElementById("overlay");
+    const overlayIframe = document.getElementById("overlay-iframe");
+    const closeBtn = document.getElementById("overlay-close");
+
+    // When clicking a trigger image
+    document.querySelectorAll(".overlay-trigger").forEach(trigger => {
+        trigger.addEventListener("click", () => {
+            const url = trigger.dataset.embedUrl;
+            overlayIframe.src = url;       // Load embed
+            overlay.style.display = "flex"; // Show overlay
+        });
+    });
+
+    // Close overlay
+    closeBtn.addEventListener("click", () => {
+        overlay.style.display = "none";
+        overlayIframe.src = "";           // Clear embed to stop audio/video
+    });
+
+});
+
+function loadDiscussion(slug) {
+    const giscus = document.querySelector("script[data-giscus]");
+    giscus.setAttribute("data-term", slug);
+
+    // Recreate the Giscus iframe to reload the discussion
+    const iframe = document.querySelector("iframe.giscus-frame");
+    if (iframe) iframe.remove();
+
+    const newScript = document.createElement("script");
+    for (let attr of giscus.attributes) {
+        newScript.setAttribute(attr.name, attr.value);
+    }
+    document.body.appendChild(newScript);
+}
+</script>
+
 <!-- Banner Section -->
 <header class="banner">
     <div class="banner-content">
@@ -217,7 +257,7 @@ title: "Esteban Gallardo - Portfolio"
     </div>
 
     <!-- Title that triggers explanation hover -->
-    <div class="item-title">
+    <div class="item-title" onmouseover="loadDiscussion('java-game-english-trainer')">
         Mobile English Trainer: Have fun learning English
     </div>
 
@@ -269,7 +309,7 @@ title: "Esteban Gallardo - Portfolio"
     </div>
 
     <!-- Title that triggers explanation hover -->
-    <div class="item-title">
+    <div class="item-title" onmouseover="loadDiscussion('java-game-simbad')>
         Simbad: The great pirate adventure
     </div>
 
@@ -303,7 +343,7 @@ title: "Esteban Gallardo - Portfolio"
     </div>
 
     <!-- Title that triggers explanation hover -->
-    <div class="item-title">
+    <div class="item-title" onmouseover="loadDiscussion('java-game-spanish-football')>
         Total Spanish Football: The way to play in a team
     </div>
 

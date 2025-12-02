@@ -236,6 +236,11 @@ function loadDiscussion(slug) {
     }
     newScript.setAttribute("data-giscus", "true"); // mark it as the config script
     document.body.appendChild(newScript);
+
+    // Scroll to the discussion panel
+    document.getElementById("discussion-panel").scrollIntoView({ 
+        behavior: "smooth" 
+    });
 }
 </script>
 

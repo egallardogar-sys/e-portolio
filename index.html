@@ -120,6 +120,44 @@ title: "Esteban Gallardo - Portfolio"
 .collapsible-section > .row {
     padding-top: 20px;
 }
+
+/* Container for each element */
+.info-card {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title below the item */
+.item-title {
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Explanation box (hidden by default) */
+.item-explanation {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%; /* appears directly below the title */
+    width: 100%;
+    max-height: 150px; /* scroll if too long */
+    overflow-y: auto;
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Hover effect triggered by the title */
+.info-card:hover .item-explanation {
+    display: block;
+}
+    
 </style>
 
 <!-- Banner Section -->
@@ -146,7 +184,28 @@ title: "Esteban Gallardo - Portfolio"
 <details class="collapsible-section">
     <summary class="row-title">Java Mobile Game Development</summary>    
     <div class="row">        
-        <div class="item video"><iframe src="https://www.youtube.com/embed/_cb-M0xejWE" allowfullscreen></iframe></div>
+        <!-- <div class="item video"><iframe src="https://www.youtube.com/embed/_cb-M0xejWE" allowfullscreen></iframe></div> -->
+<div class="item info-card">
+
+    <!-- Visual item -->
+    <div class="item-content">
+        <iframe src="https://www.youtube.com/embed/_cb-M0xejWE" allowfullscreen></iframe>
+    </div>
+
+    <!-- Title that triggers explanation hover -->
+    <div class="item-title">
+        Mobile English Trainer
+    </div>
+
+    <!-- Hover explanation panel -->
+    <div class="item-explanation">
+        <p>
+            This project was developed to run efficiently on J2ME devices with extremely
+            limited memory. It includes procedural level generation and a custom physics engine.
+        </p>
+    </div>
+
+</div>        
         <div class="item video"><iframe src="https://www.youtube.com/embed/Xila17sNKNQ" allowfullscreen></iframe></div>
         <div class="item video"><iframe src="https://www.youtube.com/embed/2yESVOXheSg" allowfullscreen></iframe></div>
         <p class="row-text">

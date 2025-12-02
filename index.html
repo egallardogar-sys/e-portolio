@@ -246,6 +246,15 @@ title: "Esteban Gallardo - Portfolio"
 </style>
 
 <script>
+const discussionTitles = {
+    "default-thread": "General Discussion",
+    "java-game-english-trainer": "Discussion about Mobile English Trainer",
+    "java-game-simbad": "Discussion about Java Game Simbad",
+    "java-game-spanish-football": "Discussion about Total Spanish Football",
+    "education-avalmind": "Discussion about the Avalmind Presentation"
+    // Add more entries here as needed
+};
+	
 document.addEventListener("DOMContentLoaded", () => {
 
     const overlay = document.getElementById("embed-overlay");
@@ -286,6 +295,9 @@ function loadDiscussion(slug) {
     }
     newScript.setAttribute("data-giscus", "true"); // mark it as the config script
     document.body.appendChild(newScript);
+
+	const titleElem = document.getElementById("discussion-title");
+    titleElem.textContent = discussionTitles[slug] || "Discussion";
 
     // Scroll to the discussion panel
     document.getElementById("discussion-panel").scrollIntoView({ 
@@ -577,8 +589,10 @@ function loadDiscussion(slug) {
 </section>
 
 <section id="discussion-panel">
-    <h2 style="text-align:center; margin-top:40px;">Discussion</h2>
-
+	<h2 id="discussion-title" style="text-align:center; margin-top:40px;">
+        General Discussion
+    </h2>
+	
     <script id="giscus-config" data-giscus
         src="https://giscus.app/client.js"
         data-repo="egallardogar-sys/e-portolio"

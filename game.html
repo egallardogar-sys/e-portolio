@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lane Castle Defense (Prototype)</title>
+  <link rel="stylesheet" href="stylegame.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="hud">
+      <div><strong>Player Castle</strong>: <span id="playerHp">0</span></div>
+      <div><strong>Enemy Castle</strong>: <span id="enemyHp">0</span></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <canvas id="game" width="1200" height="420"></canvas>
+
+    <section class="controls">
+        <button class="spawn-btn" data-unit="knight">
+        <span class="label">Deploy Knight</span>
+        <span class="cooldown-bar"></span>
+        </button>
+
+        <button class="spawn-btn" data-unit="archer">
+        <span class="label">Deploy Archer</span>
+        <span class="cooldown-bar"></span>
+        </button>
+
+        <button class="spawn-btn" data-unit="horseman">
+        <span class="label">Deploy Horseman</span>
+        <span class="cooldown-bar"></span>
+        </button>
+
+        <button class="spawn-btn" data-unit="shield">
+        <span class="label">Deploy Shield</span>
+        <span class="cooldown-bar"></span>
+        </button>
+
+        <div class="hint">
+            Tip: tweak enemy waves in <code>game.js</code> → <code>WAVES</code>.
+        </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<levels player_cooldown_knight="2.5" player_cooldown_archer="3.0" player_cooldown_horseman="4.0"  player_cooldown_shield="5.0">
+	<waves level="1" loop="true" loopAfter="30">
+	  <wave id="1">
+		<spawn time="1.5" unit="knight" count="1" />
+		<spawn time="3.0" unit="archer" count="1" />
+	  </wave>
+
+	  <wave id="2">
+		<spawn time="5.0" unit="knight" count="2" spacing="0.5" />
+		<spawn time="8.0" unit="horseman" count="1" />
+	  </wave>
+
+	  <wave id="3">
+		<spawn time="12.0" unit="shield" count="1" />
+		<spawn time="14.0" unit="archer" count="2" spacing="0.8" />
+	  </wave>
+	</waves>
+	
+	<waves level="2" loop="true" loopAfter="30">
+	  <wave id="1">
+		<spawn time="1.0" unit="horseman" count="1" />
+		<spawn time="1.5" unit="knight" count="1" />
+		<spawn time="2.0" unit="archer" count="1" />
+		<spawn time="3.5" unit="shield" count="1" />
+	  </wave>
+
+	  <wave id="2">
+		<spawn time="6.0" unit="knight" count="2" spacing="0.5" />
+		<spawn time="7.2" unit="horseman" count="1" />
+		<spawn time="7.9" unit="shield" count="1" />
+		<spawn time="8.7" unit="shield" count="1" />
+	  </wave>
+
+	  <wave id="3">
+		<spawn time="12.0" unit="shield" count="1" />
+		<spawn time="13.0" unit="archer" count="2" spacing="0.8" />
+		<spawn time="14.3" unit="archer" count="2" spacing="0.8" />
+		<spawn time="15.6" unit="archer" count="2" spacing="0.8" />
+	  </wave>
+	</waves>	
+	
+</levels>

@@ -1,0 +1,16 @@
+<waves loop="true" loopAfter="30">
+  <wave id="1">
+    <spawn time="1.5" unit="knight" count="1" />
+    <spawn time="3.0" unit="archer" count="1" />
+  </wave>
+
+  <wave id="2">
+    <spawn time="5.0" unit="knight" count="2" spacing="0.5" />
+    <spawn time="8.0" unit="horseman" count="1" />
+  </wave>
+
+  <wave id="3">
+    <spawn time="12.0" unit="shield" count="1" />
+    <spawn time="14.0" unit="archer" count="2" spacing="0.8" />
+  </wave>
+</waves>
